@@ -3,6 +3,17 @@ manually merge sort your favourite touhou songs
 
 ## Developer notes
 
+---
+**IMPORTANT**
+
+If you are modifying `fnc_data_song.js`, `fnc_main_song.js` or `tcs_style_song.css`, you must increment their `?v=` values at the top of `index.html`.
+
+If you modify any of the other `.js` files (for whatever reason), you must append `?v=1` parameter to their references in `index.html` and update this readme.
+
+Because this application is intended to run without a server-side scripting language and we want to bust the cache only when an update occurs, this is the best we can do (suggestions are welcome).
+
+---
+
 All of the song data is found at [src/fnc_data_song.js](./src/fnc_data_song.js), defined in the array `ary_CharacterData`. Each song's data is an array with a specific number of elements; for example:
 
 ```json
